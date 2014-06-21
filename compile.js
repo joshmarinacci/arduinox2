@@ -8,6 +8,7 @@ var fs = require('fs');
 var sh = require('execSync');
 var wrench = require('wrench');
 var LIBRARIES = require('./libraries');
+var settings = require('./settings.js');
 
 String.prototype.endsWith = function(suffix) {
     return this.indexOf(suffix, this.length - suffix.length) !== -1;
@@ -293,6 +294,7 @@ exports.compile = function(sketchPath, outdir,options, publish, sketchDir, final
         });
 
         //TODO userlibs
+		includepaths.push(settings.userlibs);
 
         //standard global includes for the arduino core itself
         includepaths.push(plat.getCorePath(options.device));
