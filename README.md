@@ -12,7 +12,7 @@ To try it out do:
 * have the regular Arduino IDE installed
 * check out the code: `git clone https://github.com/joshmarinacci/ElectronIDE`
 * install all deps with `cd ElectronIDE; npm install`
-* modify `settings.js` to fit your environment
+* copy `settings.js.example` to `settings.js` and modify to fit your environment
 * run `node electron`
 * open your browser to `http://localhost:54329/`
 
