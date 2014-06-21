@@ -293,7 +293,7 @@ exports.compile = function(sketchPath, outdir,options, publish, sketchDir, final
             librarypaths.push(plat.getStandardLibraryPath()+'/'+lib);
         });
 
-        //TODO userlibs
+        //old userlibs
 		includepaths.push(settings.userlibs);
 
         //standard global includes for the arduino core itself
