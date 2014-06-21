@@ -8,7 +8,6 @@ var fs = require('fs');
 var sh = require('execSync');
 var wrench = require('wrench');
 var LIBRARIES = require('./libraries');
-var settings = require('./settings.js');
 
 String.prototype.endsWith = function(suffix) {
     return this.indexOf(suffix, this.length - suffix.length) !== -1;
