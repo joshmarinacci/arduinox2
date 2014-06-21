@@ -5,14 +5,14 @@ New web based Arduino IDE, not affiliated with the official Arduino projects.
 
 Very early stages. Just compilation and basic editing works right now, plus some library stuff You must
 be comfortable with the command line right now. All paths are currently
-hard coded for Mac.  
+hard coded for Mac.
 To try it out do:
 
 * have NodeJS and NPM installed
 * have the regular Arduino IDE installed
 * check out the code: `git clone https://github.com/joshmarinacci/ElectronIDE`
 * install all deps with `cd ElectronIDE; npm install`
-* modify `settings.js` to fit your environment
+* copy `settings.js.example` to `settings.js` and modify to fit your environment
 * run `node electron`
 * open your browser to `http://localhost:54329/`
 
@@ -38,7 +38,7 @@ also made a bunch of small GUI tweaks and the first attempt at a serial console.
 
 Note that on Linux you should use the arduino-core package provided by your OS, and
 make sure that `node --version` returns something valid. You might have another program
-called node in it's place.  
+called node in it's place.
 
 For this release please test compiling all of your sketches to see where it breaks.
 Undoubtedly we will have more libraries and compiler fixes to add.  File issues on
