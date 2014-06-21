@@ -16,8 +16,6 @@ gulp.task( 'scripts', function() {
     gulp.src( [
         './public/bower_components/jquery/dist/jquery.min.js',
         './public/bower_components/mustache/mustache.js',
-        './public/bower_components/ace-builds/src-min-noconflict/ace.js',
-        './public/bower_components/ace-builds/src-min-noconflict/ext-language_tools.js',
         './public/bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js',
         './public/bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js',
         './public/bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js',
