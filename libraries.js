@@ -10,7 +10,7 @@ var libs = null;
 
 function isInstalled() {
     //console.log('checking if',this.id,'is installed');
-    if(this.source == 'ide') return true;
+    if(this.source == 'ide' || this.source == 'oldlib') return true;
     if(fs.existsSync(settings.repos+'/'+this.id)) return true;
     return false;
 }
