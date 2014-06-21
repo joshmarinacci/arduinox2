@@ -294,14 +294,14 @@ exports.compile = function(sketchPath, outdir,options, publish, sketchDir, final
         });
 
         //old userlibs
-		includepaths.push(settings.userlibs);
+		//includepaths.push(settings.userlibs);
 
         //standard global includes for the arduino core itself
         includepaths.push(plat.getCorePath(options.device));
         includepaths.push(plat.getVariantPath(options.device));
         includepaths.push(sketchDir);
 
-        console.log("include path =",includepaths);
+        console.log("include path = ",includepaths);
         console.log("includedlibs = ", includedLibs);
         calculateLibs(includedLibs,includepaths,libextra, debug, cb, plat);
     });
