@@ -1,5 +1,5 @@
 //where your sketches live
-exports.usersketches = "/Users/josh/Documents/Arduino/";
+exports.usersketches = "/Users/johnathanb/Documents/Arduino/";
 
 //where your personal libraries live. new libs will *not* go here
 exports.userlibs = "/Users/josh/Documents/Arduino/Libraries";
@@ -8,7 +8,7 @@ exports.userlibs = "/Users/josh/Documents/Arduino/Libraries";
 exports.root = "/Applications/Arduino.app/Contents/Resources/Java";
 
 //where new libs will be downlaoded to
-exports.repos = "/Users/josh/projects/junkrepos";
+exports.repos = "/Users/johnathanb/projects/junkrepos";
 
 // ==============
 // you shouldn't need to modify anything below this line
