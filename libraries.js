@@ -31,6 +31,22 @@ function getIncludePaths(platform) {
         });
         return paths;
     }
+    if(this.source == 'oldlib') {
+        var path = settings.userlibs+'/'+this.location;
+        //console.log("files = ",fs.readdirSync(path));
+        var paths = [];
+        paths.push(path);
+        fs.readdirSync(path).forEach(function(filename) {
+            if(fs.statSync(path+'/'+filename).isDirectory()) {
+                if(filename != 'examples') {
+                    //console.log("found a subdir of files. use it",filename);
+                    paths.push(path+'/'+filename);
+                }
+            }
+        });
+        return paths;
+	}
+
     if(this.path) {
         return [settings.repos+'/'+this.id+'/'+this.path];
     }
