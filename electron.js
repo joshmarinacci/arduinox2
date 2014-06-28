@@ -8,6 +8,7 @@ var compile = require('./compile');
 var uploader = require('./uploader');
 var websocket = require('nodejs-websocket');
 var path = require('path');
+var open = require('open');
 
 var settings = require('./settings.js');
 var sketches = require('./sketches.js');
@@ -315,7 +316,8 @@ app.post('/serial/close', function(req,res) {
 });
 
 var server = app.listen(54329,function() {
-    console.log('open your browser to http://localhost:'+server.address().port+'/');
+    //console.log('open your browser to http://localhost:'+server.address().port+'/');
+    open('http://localhost:' + server.address().port);
 });
 
 
