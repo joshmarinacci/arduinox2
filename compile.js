@@ -487,13 +487,13 @@ function compileCPP(options, outdir, includepaths, cfile,debug, cb) {
     ];
 
     includepaths.forEach(function(path){
-        cmd.push("-I"+path);
+        cmd.push("-I"+'"'+path+'"');
     })
 
-    cmd.push(cfile); //add the actual c++ file
+    cmd.push(' "'+cfile+'"'); //add the actual c++ file
     cmd.push('-o'); //output object file
     var filename = cfile.substring(cfile.lastIndexOf('/')+1);
-    cmd.push(outdir+'/'+filename+'.o');
+    cmd.push('"'+outdir+'/'+filename+'.o"');
 
     exec(cmd,cb, debug);
 }
@@ -516,12 +516,12 @@ function compileC(options, outdir, includepaths, cfile, debug, cb) {
         '-DUSB_PID='+options.device.pid, //??
     ];
     includepaths.forEach(function(path){
-        cmd.push("-I"+path);
+        cmd.push("-I"+'"'+path+'"');
     })
     cmd.push(cfile); //add the actual c file
     cmd.push('-o');
     var filename = cfile.substring(cfile.lastIndexOf('/')+1);
-    cmd.push(outdir+'/'+filename+'.o');
+    cmd.push('"'+outdir+'/'+filename+'.o"');
 
     exec(cmd, cb, debug);
 }
